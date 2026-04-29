@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
 export default function Features() {
+  const baseUrl = import.meta.env.BASE_URL;
   return (
     <section className="features">
       <div className="feature-card">
-        <img src="/public/ engine.png" alt="Engines" />
+        {/* <img src={`${baseUrl}engine.png`} alt="Engines" /> */}
+        <img src={`${baseUrl}dvigun.png`} alt="Engines" />
         <div className="feature-content">
           <h3>ENGINES</h3>
           <p>
@@ -18,7 +20,7 @@ export default function Features() {
         </div>
       </div>
       <div className="feature-card">
-        <img src="/public/interior.png" alt="Interior" />
+        <img src={`${baseUrl}interior.png`} alt="Interior" />
         <div className="feature-content">
           <h3>INTERIOR</h3>
           <p>
