@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+.bmw {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  object-fit: contain;
+}
+
+.header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.bmw-logo {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  height: 88px;
+  width: auto;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 35px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.nav-left {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.nav-left a {
+  color: #999999;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-left a:hover {
+  color: white;
+}
+
+.nav-center {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 3px;
+  /* padding-right: -20px; */
+  margin-right: 250px;
+}
+
+.nav-center span {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 100%;
+  color: white;
+}
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 15px;
+}
+
+.models {
+  font-size: 22px;
+  color: #999999;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: #aaa;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+.dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: white;
+}
+
+.bmw-container {
+  padding: 40px;
+  color: white;
+}
+
+.bmw-title {
+  color: #999;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* РЯД */
+.trio-bmw {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* КАРТКА */
+.card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* КАРТИНКА */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ЗАТЕМНЕННЯ */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* ТЕКСТ */
+.card-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card-content span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ХОВЕР */
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/*  */
+/*  */
+/* 
+ */
+
+/* СЕКЦІЯ */
+.features {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* КАРТКА */
+.feature-card {
+  position: relative;
+  flex: 1;
+  height: 260px;
+  border: #ccc solid 0.25px;
+  overflow: hidden;
+}
+
+/* КАРТИНКА */
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feature-card h3 {
+  color: #ebdcdc;
+}
+.feature-card p {
+  margin-top: 50px;
+}
+.feature-card button {
+  margin-top: 30px;
+}
+/* затемнення */
+.feature-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ТЕКСТ */
+.feature-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  max-width: 250px;
+}
+
+.feature-content h3 {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.feature-content p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* КНОПКА */
+.feature-content button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.feature-content button:hover {
+  background: white;
+  color: black;
+}
