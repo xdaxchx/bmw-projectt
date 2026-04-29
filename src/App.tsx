@@ -56,7 +56,7 @@ import Features from "./components/Features";
 import BmwDetails from "./pages/BmwDetails";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bmw-projectt/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/models" element={<Bmw />} />

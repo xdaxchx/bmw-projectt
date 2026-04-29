@@ -76,13 +76,3 @@
   position: absolute;
   left: 0;
 }
-
-@media (max-width: 768px) {
-  .details-content {
-    flex-direction: column;
-  }
-
-  .details-content img {
-    width: 100%;
-  }
-}

@@ -16,6 +16,7 @@ import { cars } from "./data/bmw";
 
 export default function Bmw() {
   const navigate = useNavigate();
+  const baseUrl = import.meta.env.BASE_URL;
 
   const handleCardClick = (carId: string) => {
     navigate(`/models/${carId}`);
@@ -33,7 +34,7 @@ export default function Bmw() {
             onClick={() => handleCardClick(car.id)}
             style={{ cursor: "pointer" }}
           >
-            <img src={`/bmw.${car.id}.png`} alt={car.name} />
+            <img src={`${baseUrl}bmw.${car.id}.png`} alt={car.name} />
             <div className="card-content">
               <h3>{car.id.toUpperCase()}</h3>
               <p>{car.year}</p>

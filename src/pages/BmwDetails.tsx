@@ -14,13 +14,15 @@ export default function BmwDetails() {
       </div>
     );
   }
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div className="details-container">
       <button className="back-btn" onClick={() => navigate("/models")}>
         ← Назад
       </button>
       <div className="details-content">
-        <img src={`/bmw.${car.id}.png`} alt={car.name} />
+        <img src={`${baseUrl}bmw.${car.id}.png`} alt={car.name} />
         <div className="details-info">
           <h1>{car.name}</h1>
           <p className="year">Роки випуску: {car.year}</p>
