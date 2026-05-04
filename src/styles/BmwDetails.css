@@ -3,42 +3,137 @@
   background: #000;
   color: white;
   min-height: 100vh;
-  padding: 40px;
+
+  /* padding: 40px; */
+}
+
+.details-content {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.details-content img {
+  width: 100%;
+  /* height: 95vh; */
+  object-fit: cover;
+  object-position: top;
+  /* margin-top: -100px; */
+  filter: brightness(0.62);
 }
 
 .back-btn {
   background: transparent;
   border: 1px solid white;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px;
   cursor: pointer;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   transition: 0.3s;
+  position: absolute;
+  z-index: 10;
+}
+
+.span-gallery {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 0.25px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 100px;
+}
+
+.span-gallery:hover {
+  background: white;
+  color: black;
 }
 
 .back-btn:hover {
   background: white;
   color: black;
 }
-
-.details-content {
-  display: flex;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.details-content img {
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 .details-info {
-  flex: 1;
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  max-width: 520px;
+  width: 90%;
+  padding: 30px 2px;
+  border-radius: 14px;
+}
+
+.details-info h1 {
+  font-size: 42px;
+}
+
+.specs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -100px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   padding: 20px;
+  width: 100%;
+  position: absolute;
+}
+
+.specs > div {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* вертикальні лінії */
+.specs > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1px;
+  height: 30px;
+  background: #333;
+}
+
+.specs p {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ГАЛЕРЕЯ */
+.gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .details-content img {
+    height: 70vh;
+  }
+
+  .details-info {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    padding: 18px 20px;
+    max-width: none;
+  }
+
+  .details-info h1 {
+    font-size: 32px;
+  }
 }
 
 .details-info h1 {
@@ -49,7 +144,19 @@
 .details-info .year {
   font-size: 18px;
   color: #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.details-info .car-info {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f0f0f0;
+  margin-bottom: 24px;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 34ch;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .details-info h2 {
@@ -75,4 +182,35 @@
   content: "→";
   position: absolute;
   left: 0;
+}
+
+.car-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.car-thumb {
+  height: 150px;
+  border-radius: 8px; /* Закруглені кути */
+  border: 2px solid #333;
+  flex: 1; /* МАГІЯ ТУТ: кожна картинка отримує однакову частку простору */
+  width: 0; /* Це потрібно, щоб картинки не "виштовхували" одна одну за край */
+  height: 149px; /* Висота рядка (можеш змінити під себе) */
+  object-fit: cover; /* Щоб фото не сплющувались, а акуратно заповнювали свою частину */
+}
+
+/* App.css / Gallery.css */
+.gallery-section {
+  margin-bottom: 40px; /* Відступ між моделями */
+}
+
+.gallery-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
 }
