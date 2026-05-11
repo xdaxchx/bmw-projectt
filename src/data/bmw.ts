@@ -8,6 +8,8 @@ export const cars = [
       { name: "2.8", power: "170hp" },
       { name: "3.5", power: "218hp" },
     ],
+    length: "4860 mm",
+    width: "1800 mm",
     detailImg: "bmww.e23.png", // нове (в сторінці)
     previewImg: "bmw.e23.png", // старе (в списку)
   },
@@ -16,10 +18,13 @@ export const cars = [
     name: "BMW E32",
     year: "1986-1994",
     info: "The E32 was the second generation of the BMW 7 Series. It introduced new design elements and advanced technology, including the first V12 engine in a BMW, making it a symbol of luxury and performance.",
+    length: "4910 mm",
+    width: "1845 mm",
     engines: [
       { name: "3.0", power: "188hp" },
       { name: "5.0", power: "300hp" },
     ],
+
     detailImg: "bmww.e32.png",
     previewImg: "bmw.e32.png",
   },
@@ -32,6 +37,9 @@ export const cars = [
       { name: "3.0", power: "218hp" },
       { name: "4.4", power: "286hp" },
     ],
+    length: "4984 mm",
+    width: "1862 mm",
+
     detailImg: "bmww.e38.png",
     previewImg: "bmw.e38.png",
   },

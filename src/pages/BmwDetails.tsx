@@ -3,6 +3,7 @@ import { cars } from "../data/bmw";
 import "../styles/BmwDetails.css";
 import Gallery from "../components/Gallery";
 import Salon from "../components/Salon";
+import Engines from "../components/Engines";
 export default function BmwDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -45,11 +46,11 @@ export default function BmwDetails() {
         <div className="specs">
           <div>
             <p>LENGTH</p>
-            <h3>4988 mm</h3>
+            <h3>{car.length}</h3>
           </div>
           <div>
             <p>WIDTH</p>
-            <h3>1862 mm</h3>
+            <h3>{car.width}</h3>
           </div>
           <div>
             <p>ENGINE OPTIONS</p>
@@ -61,11 +62,14 @@ export default function BmwDetails() {
           </div>
         </div>
       </div>
-      <Gallery carId={car.id} />
+      <Gallery id={car.id} />
 
       <h2 className="bmw-title">CHOOSE ENGINE</h2>
+      <Engines />
+
+      <h2 className="bmw-title">EXPLORE INTERIOR</h2>
       {/* photo engine */}
-      <Salon />
+      <Salon id={car.id} />
     </div>
   );
 }

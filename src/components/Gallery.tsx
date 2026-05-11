@@ -65,8 +65,8 @@ const galleries = [
 //   );
 // }
 
-export default function Gallery({ carId }) {
-  if (!carId) {
+export default function Gallery({ id }) {
+  if (!id) {
     return (
       <div>
         {galleries.map((group) => (
@@ -84,7 +84,7 @@ export default function Gallery({ carId }) {
     );
   }
 
-  const currentGallery = galleries.find((g) => g.title.toLowerCase() === carId);
+  const currentGallery = galleries.find((g) => g.title.toLowerCase() === id);
 
   if (!currentGallery) return null;
 

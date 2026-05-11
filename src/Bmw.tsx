@@ -1,16 +1,3 @@
-// export default function Bmw() {
-//   return (
-//     <div className="bmw-container">
-//       <div className="bmw-section">CHOOSE YOUR GENERATION</div>
-//       <div className="trio-bmw">
-//         <img src="/bmw.e23.png" className="bmw-card" alt="E23" />
-//         <img src="/bmw.e32.png" className="bmw-card" alt="E32" />
-//         <img src="/bmw.e38.png" className="bmw-card" alt="E38" />
-//       </div>
-//     </div>
-//   );
-// }
-
 import { useNavigate } from "react-router-dom";
 import { cars } from "./data/bmw";
 export default function Bmw() {

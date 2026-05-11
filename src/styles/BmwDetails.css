@@ -111,6 +111,7 @@
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  padding-bottom: 50px;
 }
 
 .gallery img {
@@ -213,4 +214,64 @@
   text-align: center;
   color: #333;
   margin-bottom: 15px;
+}
+
+.gallery-engines {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.car-thumb-engines {
+  position: relative;
+}
+
+.bmw-title {
+  margin-top: 20px;
+}
+.car-thumb-engines img {
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  border: 2px solid #212020;
+  border-radius: 15px;
+  display: block;
+}
+
+.engine-info {
+  background: #111;
+  padding: 15px;
+  color: white;
+  margin-top: -5px;
+}
+
+.engine-info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.engine-info p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.engine-info span {
+  color: #999;
+}
+
+.gallery-page {
+  background: #000;
+  padding: 60px 40px;
+  object-fit: cover;
+}
+
+.gallery-block {
+  margin-bottom: 120px;
+}
+
+.gallery-block h1 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 40px;
 }

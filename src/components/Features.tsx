@@ -14,7 +14,7 @@ export default function Features() {
             <br />
             that defined an era.
           </p>
-          <Link to="/engines" className="btn">
+          <Link to="/gallery" className="btn">
             VIEW ENGINES
           </Link>
         </div>
@@ -28,7 +28,7 @@ export default function Features() {
             <br />
             Unmatched comfort.
           </p>
-          <Link to="/interiors" className="btn">
+          <Link to="/gallery" className="btn">
             VIEW INTERIORS
           </Link>
         </div>
